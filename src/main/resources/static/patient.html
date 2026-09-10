@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Patient Management</title>
+
+<link rel="stylesheet" href="css/patient.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>🏥 PatientPro</h2>
+
+        <ul>
+
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+            <li class="active"><a href="patient.html">👨‍⚕ Patients</a></li>
+
+            <li><a href="#">📅 Appointments</a></li>
+
+            <li><a href="#">💊 Medicines</a></li>
+
+            <li><a href="login.html">🚪 Logout</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <!-- Header -->
+
+        <div class="page-header">
+
+            <div>
+                <h1>Patient Management</h1>
+                <p>Manage patient records quickly and efficiently.</p>
+            </div>
+
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input
+                    type="text"
+                    id="searchPatient"
+                    placeholder="Search patients...">
+            </div>
+
+        </div>
+
+        <!-- Add Patient -->
+
+        <div class="form-card">
+
+            <h2>Add New Patient</h2>
+
+            <div class="form-grid">
+
+                <input type="number" id="patientId" placeholder="Patient ID">
+
+                <input type="text" id="patientName" placeholder="Patient Name">
+
+                <input type="number" id="age" placeholder="Age">
+
+                <select id="gender">
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <input type="text" id="bloodGroup" placeholder="Blood Group">
+
+                <input type="text" id="phoneNumber" placeholder="Phone Number">
+
+                <input type="text" id="disease" placeholder="Disease">
+
+                <input type="text" id="doctorName" placeholder="Doctor Name">
+
+                <input type="date" id="admissionDate">
+
+                <input type="number" id="height" placeholder="Height (cm)">
+
+                <input type="number" id="weight" placeholder="Weight (kg)">
+
+                <input type="text" id="bloodPressure" placeholder="Blood Pressure (120/ 80 mmHg)">
+
+                <input type="text" id="allergies" placeholder="Allergies">
+
+                <input type="text" id="emergencyContact" placeholder="Emergency Contact">
+
+                <select id="status">
+                    <option value="">Select Status</option>
+                    <option>Admitted</option>
+                    <option>Discharged</option>
+                    <option>Out Patient</option>
+                </select>
+
+                <textarea
+                    id="address"
+                    placeholder="Patient Address"></textarea>
+
+            </div>
+
+            <button
+                class="save-btn"
+                onclick="addPatient()">
+
+                Save Patient
+
+            </button>
+
+        </div>
+
+        <!-- Patient Records -->
+
+        <div class="table-card">
+
+            <h2>Patient Records</h2>
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Blood Group</th>
+                            <th>Phone</th>
+                            <th>Disease</th>
+                            <th>Doctor</th>
+                            <th>Admission Date</th>
+                            <th>Height</th>
+                            <th>Weight</th>
+                            <th>Blood Pressure</th>
+                            <th>Allergies</th>
+                            <th>Emergency Contact</th>
+                            <th>Status</th>
+                            <th>Address</th>
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="patientTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/patient.js"></script>
+
+</body>
+</html>

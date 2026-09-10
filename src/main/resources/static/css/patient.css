@@ -1,0 +1,755 @@
+/* ==========================================
+      PATIENT MANAGEMENT SYSTEM
+      PROFESSIONAL UI
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --primary:#0B1F3A;
+    --secondary:#13315C;
+    --green:#58D3A3;
+    --green-dark:#2F9E78;
+    --red:#FF6B6B;
+
+    --background:#F4F7FC;
+    --white:#ffffff;
+    --text:#1B2B45;
+    --gray:#7B8794;
+    --border:#E6ECF3;
+
+    --shadow:
+    0 12px 30px rgba(15,23,42,.08);
+
+    --radius:18px;
+
+}
+
+/* =========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--background);
+
+}
+
+.container{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+/* ===========================
+        SIDEBAR
+=========================== */
+
+.sidebar{
+
+    width:270px;
+
+    background:
+    linear-gradient(180deg,#081B33,#13315C);
+
+    color:white;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    height:100vh;
+
+    padding:30px 20px;
+
+}
+
+.sidebar h2{
+
+    text-align:center;
+
+    font-size:28px;
+
+    margin-bottom:45px;
+
+    letter-spacing:1px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    margin-bottom:12px;
+
+}
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#E6EEF8;
+
+    text-decoration:none;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+.sidebar a:hover,
+.sidebar .active a{
+
+    background:rgba(88,211,163,.18);
+
+    color:#7FE7C4;
+
+}
+
+/* ===========================
+       MAIN CONTENT
+=========================== */
+
+.content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:40px;
+
+}
+
+/* ===========================
+       PAGE HEADER
+=========================== */
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.page-header h1{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    color:var(--gray);
+
+    font-size:15px;
+
+}
+
+/* ===========================
+      SEARCH BAR
+=========================== */
+
+.search-box{
+
+    width:420px;
+
+    height:58px;
+
+    background:white;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 20px;
+
+    gap:12px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.search-box:hover{
+
+    box-shadow:
+    0 18px 35px rgba(15,23,42,.10);
+
+}
+
+.search-box:focus-within{
+
+    border-color:var(--green);
+
+    box-shadow:
+    0 0 0 5px rgba(88,211,163,.18);
+
+}
+
+.search-icon{
+
+    font-size:18px;
+
+    color:#A0AEC0;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:15px;
+
+}
+
+.search-box input::placeholder{
+
+    color:#A0AEC0;
+
+}
+/* ==========================================
+            ADD PATIENT CARD
+========================================== */
+
+.form-card{
+
+    background:var(--white);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:35px;
+
+}
+
+.form-card h2{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:28px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+              FORM GRID
+========================================== */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+/* ==========================================
+            INPUTS
+========================================== */
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:#FAFCFF;
+
+    font-size:15px;
+
+    color:var(--text);
+
+    transition:.3s;
+
+}
+
+.form-grid input::placeholder,
+.form-grid textarea::placeholder{
+
+    color:#A4AFBC;
+
+}
+
+.form-grid input:hover,
+.form-grid select:hover,
+.form-grid textarea:hover{
+
+    border-color:#B8C8DA;
+
+}
+
+/* ==========================================
+            FOCUS EFFECT
+========================================== */
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus{
+
+    outline:none;
+
+    background:white;
+
+    border-color:var(--green);
+
+    box-shadow:
+    0 0 0 5px rgba(88,211,163,.15);
+
+}
+
+/* ==========================================
+             DROPDOWN
+========================================== */
+
+.form-grid select{
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+              ADDRESS BOX
+========================================== */
+
+textarea{
+
+    grid-column:span 3;
+
+    min-height:110px;
+
+    resize:none;
+
+}
+
+/* ==========================================
+           SAVE BUTTON
+========================================== */
+
+.save-btn{
+
+    margin-top:30px;
+
+    background:
+    linear-gradient(135deg,#58D3A3,#2F9E78);
+
+    color:white;
+
+    border:none;
+
+    padding:16px 38px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    0 12px 25px rgba(88,211,163,.28);
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 18px 35px rgba(88,211,163,.38);
+
+}
+
+/* ==========================================
+          FORM LABEL STYLE
+========================================== */
+
+.form-card label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+      SMALL FIELD ANIMATION
+========================================== */
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea{
+
+    animation:fadeUp .4s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================
+              TABLE CARD
+========================================== */
+
+.table-card{
+
+    background:var(--white);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    overflow-x:auto;
+
+}
+
+.table-card h2{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+                  TABLE
+========================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:1400px;
+
+}
+
+/* ==========================================
+              TABLE HEADER
+========================================== */
+
+thead{
+
+    background:linear-gradient(135deg,#0B1F3A,#13315C);
+
+}
+
+th{
+
+    color:white;
+
+    padding:18px 15px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+}
+
+/* ==========================================
+               TABLE BODY
+========================================== */
+
+td{
+
+    padding:16px 15px;
+
+    border-bottom:1px solid #EEF2F7;
+
+    text-align:center;
+
+    color:#374151;
+
+    font-size:14px;
+
+    white-space:nowrap;
+
+}
+
+tbody tr{
+
+    transition:.25s;
+
+}
+
+tbody tr:hover{
+
+    background:#F7FAFD;
+
+}
+
+/* Alternate Row Color */
+
+tbody tr:nth-child(even){
+
+    background:#FCFDFE;
+
+}
+
+/* ==========================================
+             ACTION BUTTONS
+========================================== */
+
+.edit{
+
+    border:none;
+
+    background:linear-gradient(135deg,#58D3A3,#2F9E78);
+
+    color:white;
+
+    padding:9px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    margin-right:8px;
+
+    transition:.25s;
+
+}
+
+.edit:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 18px rgba(88,211,163,.35);
+
+}
+
+.delete{
+
+    border:none;
+
+    background:linear-gradient(135deg,#FF6B6B,#E74C3C);
+
+    color:white;
+
+    padding:9px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+.delete:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 18px rgba(255,107,107,.35);
+
+}
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+.table-card::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.table-card::-webkit-scrollbar-track{
+
+    background:#EEF2F7;
+
+    border-radius:20px;
+
+}
+
+.table-card::-webkit-scrollbar-thumb{
+
+    background:#AAB7C6;
+
+    border-radius:20px;
+
+}
+
+.table-card::-webkit-scrollbar-thumb:hover{
+
+    background:#7B8794;
+
+}
+
+/* ==========================================
+              RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .form-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    textarea{
+
+        grid-column:span 2;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+    .content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .search-box{
+
+        width:100%;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    textarea{
+
+        grid-column:span 1;
+
+    }
+
+}

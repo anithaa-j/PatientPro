@@ -1,0 +1,768 @@
+/*======================================
+        PATIENTPRO LOGIN
+======================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:#07192f;
+    color:white;
+}
+
+/*=========================
+      BACKGROUND
+=========================*/
+
+.background{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:-3;
+
+    background:
+    radial-gradient(circle at top left,#10335d 0%,#07192f 65%);
+}
+
+/*=========================
+        GRID
+=========================*/
+
+.grid{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    opacity:.55;
+}
+
+/*=========================
+      GLOWING CIRCLES
+=========================*/
+
+.circle{
+
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+}
+
+.circle1{
+
+    width:340px;
+    height:340px;
+
+    background:#00d9ff;
+
+    top:-120px;
+    left:-80px;
+
+    opacity:.15;
+}
+
+.circle2{
+
+    width:280px;
+    height:280px;
+
+    background:#4c9dff;
+
+    right:-80px;
+    top:120px;
+
+    opacity:.12;
+}
+
+.circle3{
+
+    width:350px;
+    height:350px;
+
+    background:#00ffd5;
+
+    bottom:-150px;
+    left:35%;
+
+    opacity:.10;
+}
+
+/*=========================
+       MAIN CONTAINER
+=========================*/
+
+.container{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:70px 80px;
+}
+
+/*=========================
+        LEFT PANEL
+=========================*/
+
+.left-panel{
+
+    width:48%;
+}
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:1px solid rgba(0,255,255,.25);
+
+    border-radius:50px;
+
+    padding:10px 18px;
+
+    color:#69d5ff;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    margin-bottom:35px;
+
+    backdrop-filter:blur(10px);
+}
+
+.dot{
+
+    width:9px;
+    height:9px;
+
+    background:#39ff89;
+
+    border-radius:50%;
+
+    box-shadow:0 0 12px #39ff89;
+}
+
+.platform{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#37d7ff;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+
+    margin-bottom:30px;
+}
+
+.left-panel h1{
+
+    font-size:68px;
+
+    font-weight:800;
+
+    line-height:1.08;
+
+    margin-bottom:28px;
+
+    letter-spacing:-2px;
+}
+
+.left-panel p{
+
+    width:85%;
+
+    color:#b8c9dc;
+
+    font-size:19px;
+
+    line-height:34px;
+
+    margin-bottom:60px;
+}
+/*======================================
+            STATS
+======================================*/
+
+.stats{
+
+    display:flex;
+
+    gap:60px;
+
+}
+
+.stats h2{
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:white;
+
+    margin-bottom:6px;
+}
+
+.stats span{
+
+    color:#f7f5f6;
+
+    letter-spacing:2px;
+
+    font-size:12px;
+}
+
+/*======================================
+          RIGHT PANEL
+======================================*/
+
+.right-panel{
+
+    width:40%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+/*======================================
+          GLASS LOGIN CARD
+======================================*/
+
+.login-card{
+
+    width:420px;
+
+    padding:50px 45px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border-radius:28px;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.45),
+
+    0 0 35px rgba(0,180,255,.15);
+
+    transition:.35s;
+}
+
+.login-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.55),
+
+    0 0 60px rgba(0,180,255,.20);
+
+}
+
+/*======================================
+           LOGIN TITLE
+======================================*/
+
+.login-card h2{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+    color:white;
+}
+
+.login-card p{
+
+    color:#c9d8e8;
+
+    margin-bottom:35px;
+
+    font-size:15px;
+}
+
+/*======================================
+            LABELS
+======================================*/
+
+.login-card label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    color:#dce7f4;
+
+    font-weight:500;
+}
+
+/*======================================
+            INPUT BOXES
+======================================*/
+
+.login-card input[type=text],
+
+.login-card input[type=password]{
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    outline:none;
+
+    padding:0 18px;
+
+    margin-bottom:22px;
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:14px;
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.login-card input::placeholder{
+
+    color:#b8cadb;
+}
+
+.login-card input:focus{
+
+    border:1px solid #32d9ff;
+
+    box-shadow:
+
+    0 0 18px rgba(50,217,255,.35);
+
+}
+
+/*======================================
+      REMEMBER & FORGOT
+======================================*/
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    font-size:14px;
+}
+
+.options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#d8e4f3;
+
+    cursor:pointer;
+}
+
+.options input{
+
+    width:16px;
+
+    height:16px;
+
+    accent-color:#2fa7ff;
+}
+
+.options a{
+
+    color:#68d3ff;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.options a:hover{
+
+    color:white;
+
+    text-decoration:underline;
+}
+
+/*======================================
+            LOGIN BUTTON
+======================================*/
+
+.login-card button{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(135deg,#1e90ff,#00c6ff);
+
+    transition:.3s;
+
+    box-shadow:
+
+    0 12px 30px rgba(0,162,255,.35);
+
+}
+
+.login-card button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 18px 40px rgba(0,162,255,.45);
+
+}
+/*======================================
+        ERROR MESSAGE
+======================================*/
+
+#error{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#ff6b6b;
+
+    font-size:14px;
+
+    font-weight:500;
+}
+
+/*======================================
+          ECG LINE
+======================================*/
+
+.ecg{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    opacity:.45;
+}
+
+.ecg svg{
+
+    width:100%;
+
+    height:90px;
+}
+
+.ecg polyline{
+
+    fill:none;
+
+    stroke:#36e6ff;
+
+    stroke-width:3;
+
+    stroke-linejoin:round;
+
+    stroke-linecap:round;
+
+    stroke-dasharray:1200;
+
+    stroke-dashoffset:1200;
+
+    animation:heartbeat 8s linear infinite;
+}
+
+/*======================================
+       FLOATING ANIMATION
+======================================*/
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/*======================================
+        ECG ANIMATION
+======================================*/
+
+@keyframes heartbeat{
+
+    to{
+
+        stroke-dashoffset:0;
+
+    }
+
+}
+
+/*======================================
+     BACKGROUND MOVEMENT
+======================================*/
+
+.circle{
+
+    animation:float 8s ease-in-out infinite;
+}
+
+.circle2{
+
+    animation-delay:2s;
+}
+
+.circle3{
+
+    animation-delay:4s;
+}
+
+/*======================================
+       LOGIN CARD FADE
+======================================*/
+
+.login-card{
+
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+      LEFT PANEL FADE
+======================================*/
+
+.left-panel{
+
+    animation:slideLeft 1s ease;
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*======================================
+        RESPONSIVE
+======================================*/
+
+@media(max-width:1100px){
+
+.container{
+
+    padding:40px;
+
+}
+
+.left-panel h1{
+
+    font-size:52px;
+
+}
+
+.login-card{
+
+    width:380px;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.container{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:50px;
+
+}
+
+.left-panel{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.left-panel p{
+
+    width:100%;
+
+}
+
+.stats{
+
+    justify-content:center;
+
+}
+
+.right-panel{
+
+    width:100%;
+
+}
+
+.login-card{
+
+    width:90%;
+
+    max-width:430px;
+
+}
+
+}
+
+@media(max-width:550px){
+
+.left-panel h1{
+
+    font-size:38px;
+
+}
+
+.stats{
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.login-card{
+
+    padding:35px 25px;
+
+}
+
+}
+.system-status{
+    color:#ffffff;
+    font-size:17px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
