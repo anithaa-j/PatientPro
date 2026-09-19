@@ -35,6 +35,7 @@ Visual Studio Code
 Maven
 Git & GitHub
 📁 Project Structure
+```text
 PatientPro/
 │
 ├── src/
@@ -60,6 +61,7 @@ PatientPro/
 ├── pom.xml
 ├── mvnw
 └── mvnw.cmd
+```
 👨‍💻 Patient Information
 
 The system stores details including:
