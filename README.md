@@ -111,6 +111,7 @@ The application runs on:
 
 http://localhost:8081
 🔄 Main Operations
+```text
 Login
   ↓
 Dashboard
@@ -122,6 +123,7 @@ Save to MySQL
 View Patient Records
   ↓
 Search / Edit / Delete
+```
 🎯 Project Objective
 
 The main objective of PatientPro is to provide a simple digital solution for managing patient records efficiently. It reduces dependence on manual record handling and makes patient information easier to access and manage.
